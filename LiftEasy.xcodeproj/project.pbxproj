@@ -14,6 +14,7 @@
 		050DDA09239BF101004D56C8 /* LiftEasy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 050DDA07239BF101004D56C8 /* LiftEasy.xcdatamodeld */; };
 		050DDA0B239BF102004D56C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050DDA0A239BF102004D56C8 /* Assets.xcassets */; };
 		050DDA0E239BF102004D56C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050DDA0C239BF102004D56C8 /* LaunchScreen.storyboard */; };
+		050DDA16239BF693004D56C8 /* LiftsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DDA15239BF693004D56C8 /* LiftsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		050DDA0A239BF102004D56C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		050DDA0D239BF102004D56C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		050DDA0F239BF102004D56C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		050DDA15239BF693004D56C8 /* LiftsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				050DD9FE239BF101004D56C8 /* AppDelegate.swift */,
 				050DDA00239BF101004D56C8 /* SceneDelegate.swift */,
 				050DDA02239BF101004D56C8 /* ViewController.swift */,
+				050DDA15239BF693004D56C8 /* LiftsTableViewController.swift */,
 				050DDA04239BF101004D56C8 /* Main.storyboard */,
 				050DDA0A239BF102004D56C8 /* Assets.xcassets */,
 				050DDA0C239BF102004D56C8 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				050DDA03239BF101004D56C8 /* ViewController.swift in Sources */,
 				050DD9FF239BF101004D56C8 /* AppDelegate.swift in Sources */,
+				050DDA16239BF693004D56C8 /* LiftsTableViewController.swift in Sources */,
 				050DDA09239BF101004D56C8 /* LiftEasy.xcdatamodeld in Sources */,
 				050DDA01239BF101004D56C8 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +293,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7X95DJ4J9;
 				INFOPLIST_FILE = LiftEasy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,7 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = colin.white.LiftEasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7X95DJ4J9;
 				INFOPLIST_FILE = LiftEasy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = colin.white.LiftEasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
