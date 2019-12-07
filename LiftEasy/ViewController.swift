@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
+    
+    @IBOutlet weak var liftButton: UIButton!
+    @IBOutlet weak var programButton: UIButton!
+    @IBOutlet weak var nutritionButton: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //self.navigationController?.isNavigationBarHidden = true
+        liftButton.layer.cornerRadius = 5
+        programButton.layer.cornerRadius = 5
+        nutritionButton.layer.cornerRadius = 5
     }
     
     override func viewWillAppear(_ animated: Bool) {
