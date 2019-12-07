@@ -16,6 +16,11 @@ class LiftsTableViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let lift1 = Lifts()
+        lift1.name = "Bench Press"
+        
+        lifts = [lift1]
     }
 
     // MARK: - Table view data source
@@ -31,7 +36,7 @@ class LiftsTableViewController: UITableViewController
         let lift = lifts[indexPath.row]
         
         cell.textLabel?.text = lift.name
-        
+        print(lift.name + "this is lift.name")
         return cell
     }
     

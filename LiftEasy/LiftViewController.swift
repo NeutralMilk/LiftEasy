@@ -49,8 +49,16 @@ class LiftViewController: UIViewController
         if let name = liftTextField.text
         {
             newLift.name = name
+            newLift.orm = 100
+            newLift.ninety = 90
+            newLift.eighty = 80
+            newLift.seventy = 70
+            newLift.sixty = 60
+            newLift.fifty = 50
             liftsTableVC?.lifts.append(newLift)
             liftsTableVC?.tableView.reloadData()
+            print(newLift.name + "this is the name printout")
+            print(liftsTableVC?.lifts.count, "this is the count")
             navigationController?.popViewController(animated: true)
         }
     }
