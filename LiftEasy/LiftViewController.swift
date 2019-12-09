@@ -31,34 +31,30 @@ class LiftViewController: UIViewController
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
 
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissKeyboard() {
+    @objc func dismissKeyboard()
+    {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
     
     @IBAction func addLift(_ sender: Any)
     {
+        //create a new instance of a lift to add to the array
         let newLift = Lifts()
         
-        if let name = liftTextField.text
+        //get the name from the text field and add it to the array, then go back to the previous screen.
+        if let name = liftTextField.text, let orm = Double(orpTextField.text!)
         {
             newLift.name = name
-            newLift.orm = 100
-            newLift.ninety = 90
-            newLift.eighty = 80
-            newLift.seventy = 70
-            newLift.sixty = 60
-            newLift.fifty = 50
+            newLift.orm  = orm
+            newLift.equalise(percent: 1, value: orm)
+            print(newLift.ninety, " This is the newLift")
+                
             liftsTableVC?.lifts.append(newLift)
             liftsTableVC?.tableView.reloadData()
-            print(newLift.name + "this is the name printout")
-            print(liftsTableVC?.lifts.count, "this is the count")
             navigationController?.popViewController(animated: true)
         }
     }

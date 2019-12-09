@@ -36,7 +36,7 @@ class LiftsTableViewController: UITableViewController
         let lift = lifts[indexPath.row]
         
         cell.textLabel?.text = lift.name
-        print(lift.name + "this is lift.name")
+        
         return cell
     }
     
