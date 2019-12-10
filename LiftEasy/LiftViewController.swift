@@ -22,6 +22,8 @@ class LiftViewController: UIViewController
     @IBOutlet weak var fiftyTextField: UITextField!
     
     var liftsTableVC : LiftsTableViewController? = nil
+    let newLift = Lifts()
+    var oldLift = Lifts()
     
     override func viewDidLoad()
     {
@@ -42,9 +44,14 @@ class LiftViewController: UIViewController
     
     @IBAction func autoFill(_ sender: Any)
     {
-        let newLift = Lifts()
         
-        
+        for i in 0...5
+        {
+            if oldLift.weights[i] != newLift.weights[i]
+            {
+                newLift.equalise(percent: i, value: newLift.weights[i])
+            }
+        }
         if let orm = Double(orpTextField.text!)
         {
             newLift.equalise(percent: 1, value: orm)
@@ -56,12 +63,14 @@ class LiftViewController: UIViewController
             fiftyTextField.text = "\(newLift.weights[5])";
         }
         
+        oldLift = newLift
+        
     }
     
     @IBAction func addLift(_ sender: Any)
     {
         //create a new instance of a lift to add to the array
-        let newLift = Lifts()
+        
         
         //get the name from the text field and add it to the array, then go back to the previous screen. Make sure all fields are filled
         if let name = liftTextField.text
