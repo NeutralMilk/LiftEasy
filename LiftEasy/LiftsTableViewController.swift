@@ -25,7 +25,8 @@ class LiftsTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return lifts.count
     }
     
@@ -51,6 +52,15 @@ class LiftsTableViewController: UITableViewController
         if let liftVC = segue.destination as? LiftViewController
         {
             liftVC.liftsTableVC = self
+        }
+        
+        if let editLiftVC = segue.destination as? EditLiftViewController
+        {
+            if let selectedLift = sender as? Lifts
+            {
+                editLiftVC.newLift = selectedLift
+            }
+            
         }
     }
 }

@@ -42,7 +42,6 @@ class Lifts
         for i in 0...5
         {
             weights[i] = rounding(value: weights[i])
-            print(weights[i], " Value is")
         }
         
     }

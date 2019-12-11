@@ -571,7 +571,7 @@
         <!--Edit Lift-->
         <scene sceneID="oWt-dt-Z0C">
             <objects>
-                <viewController id="Na1-yS-MOI" customClass="editLiftViewController" sceneMemberID="viewController">
+                <viewController id="Na1-yS-MOI" customClass="EditLiftViewController" customModule="LiftEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="itF-Yh-1vL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -674,8 +674,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-TE-Ln1">
-                                <rect key="frame" x="157" y="495.5" width="100" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-TE-Ln1">
+                                <rect key="frame" x="159" y="495.5" width="100" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="44Y-cv-biI"/>
@@ -733,6 +733,16 @@
                         <viewLayoutGuide key="safeArea" id="dJN-Af-Wn0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Lift" id="ZlF-SG-udP"/>
+                    <connections>
+                        <outlet property="eightyTextField" destination="0eh-QX-GTM" id="m5W-uP-gEO"/>
+                        <outlet property="fiftyTextField" destination="5hM-IB-iaU" id="lg0-4a-lJk"/>
+                        <outlet property="liftTextField" destination="7IN-ja-Qvg" id="n6w-bD-MmR"/>
+                        <outlet property="ninetyTextField" destination="26X-AJ-4AZ" id="PXA-bs-hW5"/>
+                        <outlet property="ormTextField" destination="LD2-ve-9u6" id="8vo-eq-bve"/>
+                        <outlet property="seventyTextField" destination="bqr-6P-sNl" id="jgD-Yl-fHf"/>
+                        <outlet property="sixtyTextField" destination="CAK-eL-Vjf" id="U9f-CH-zSY"/>
+                        <outlet property="updateLiftButton" destination="ofJ-TE-Ln1" id="Z5T-l4-lsT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmH-5n-chk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
