@@ -28,19 +28,16 @@ class Lifts
         0.0  //fifty
     ]
     
-    func equalise(percent: Int, value: Double)
+    func equalise(value: Double)
     {
-        let percent = percent
         let orm = value
         
-        if(percent == 1)
-        {
-            weights[1] = orm * 0.9
-            weights[2] = orm * 0.8
-            weights[3] = orm * 0.7
-            weights[4] = orm * 0.6
-            weights[5] = orm * 0.5
-        }
+        weights[0] = orm
+        weights[1] = orm * 0.9
+        weights[2] = orm * 0.8
+        weights[3] = orm * 0.7
+        weights[4] = orm * 0.6
+        weights[5] = orm * 0.5
         
         for i in 0...5
         {
