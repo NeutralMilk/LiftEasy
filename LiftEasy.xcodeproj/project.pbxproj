@@ -19,7 +19,7 @@
 		050DDA1A239BFA1B004D56C8 /* NutritionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DDA19239BFA1B004D56C8 /* NutritionTableViewController.swift */; };
 		050DDA1C239C0262004D56C8 /* Lifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DDA1B239C0262004D56C8 /* Lifts.swift */; };
 		050DDA1E239C0C3C004D56C8 /* LiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DDA1D239C0C3C004D56C8 /* LiftViewController.swift */; };
-		05C0296D23A13CCE00BC8388 /* EditLiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C0296C23A13CCE00BC8388 /* EditLiftViewController.swift */; };
+		05C0296F23A1605300BC8388 /* EditLiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C0296E23A1605300BC8388 /* EditLiftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		050DDA19239BFA1B004D56C8 /* NutritionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewController.swift; sourceTree = "<group>"; };
 		050DDA1B239C0262004D56C8 /* Lifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifts.swift; sourceTree = "<group>"; };
 		050DDA1D239C0C3C004D56C8 /* LiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftViewController.swift; sourceTree = "<group>"; };
-		05C0296C23A13CCE00BC8388 /* EditLiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLiftViewController.swift; sourceTree = "<group>"; };
+		05C0296E23A1605300BC8388 /* EditLiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,13 +73,13 @@
 				050DD9FE239BF101004D56C8 /* AppDelegate.swift */,
 				050DDA00239BF101004D56C8 /* SceneDelegate.swift */,
 				050DDA02239BF101004D56C8 /* ViewController.swift */,
-				050DDA15239BF693004D56C8 /* LiftsTableViewController.swift */,
 				050DDA17239BF8FA004D56C8 /* ProgramsTableViewController.swift */,
 				050DDA19239BFA1B004D56C8 /* NutritionTableViewController.swift */,
+				050DDA15239BF693004D56C8 /* LiftsTableViewController.swift */,
 				050DDA1D239C0C3C004D56C8 /* LiftViewController.swift */,
 				050DDA1B239C0262004D56C8 /* Lifts.swift */,
-				05C0296C23A13CCE00BC8388 /* EditLiftViewController.swift */,
 				050DDA04239BF101004D56C8 /* Main.storyboard */,
+				05C0296E23A1605300BC8388 /* EditLiftViewController.swift */,
 				050DDA0A239BF102004D56C8 /* Assets.xcassets */,
 				050DDA0C239BF102004D56C8 /* LaunchScreen.storyboard */,
 				050DDA0F239BF102004D56C8 /* Info.plist */,
@@ -164,7 +164,7 @@
 				050DDA1A239BFA1B004D56C8 /* NutritionTableViewController.swift in Sources */,
 				050DD9FF239BF101004D56C8 /* AppDelegate.swift in Sources */,
 				050DDA18239BF8FA004D56C8 /* ProgramsTableViewController.swift in Sources */,
-				05C0296D23A13CCE00BC8388 /* EditLiftViewController.swift in Sources */,
+				05C0296F23A1605300BC8388 /* EditLiftViewController.swift in Sources */,
 				050DDA16239BF693004D56C8 /* LiftsTableViewController.swift in Sources */,
 				050DDA09239BF101004D56C8 /* LiftEasy.xcdatamodeld in Sources */,
 				050DDA01239BF101004D56C8 /* SceneDelegate.swift in Sources */,

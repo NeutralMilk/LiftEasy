@@ -40,17 +40,17 @@ class LiftsTableViewController: UITableViewController
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let selectedTerm = lifts[indexPath.row]
-        performSegue(withIdentifier: "goToEditLift", sender: selectedTerm)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let selectedLift = lifts[indexPath.row]
+        performSegue(withIdentifier: "goToEditLift", sender: selectedLift)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if let createVC = segue.destination as? LiftViewController
+        if let liftVC = segue.destination as? LiftViewController
         {
-            createVC.liftsTableVC = self
+            liftVC.liftsTableVC = self
         }
     }
 }

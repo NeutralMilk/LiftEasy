@@ -23,7 +23,6 @@ class LiftViewController: UIViewController
     
     var liftsTableVC : LiftsTableViewController? = nil
     let newLift = Lifts()
-    var oldLift = Lifts()
     
     override func viewDidLoad()
     {
