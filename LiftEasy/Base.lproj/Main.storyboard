@@ -681,13 +681,19 @@
                                     <constraint firstAttribute="width" constant="100" id="44Y-cv-biI"/>
                                     <constraint firstAttribute="height" constant="40" id="iWe-Pl-X9d"/>
                                 </constraints>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="Update">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateLift:" destination="Na1-yS-MOI" eventType="touchUpInside" id="9Lc-w8-8nY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AA9-CT-k2C">
                                 <rect key="frame" x="253" y="219" width="32" height="30"/>
                                 <state key="normal" title="Auto"/>
+                                <connections>
+                                    <action selector="updateAuto:" destination="Na1-yS-MOI" eventType="touchUpInside" id="eyW-oq-xSF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
