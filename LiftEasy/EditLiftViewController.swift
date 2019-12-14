@@ -22,6 +22,7 @@ class EditLiftViewController: UIViewController {
     
     var liftsTableVC : LiftsTableViewController? = nil
     var newLift = Lifts()
+    var index = 0
     
     override func viewDidLoad()
     {
@@ -82,7 +83,7 @@ class EditLiftViewController: UIViewController {
             newLift.equalise(value: orm)
             //print(newLift.weights[1], " This is the newLift")
                 
-            liftsTableVC?.lifts.append(newLift)
+            //liftsTableVC?.lifts.append(newLift)
             liftsTableVC?.tableView.reloadData()
             navigationController?.popViewController(animated: true)
         }
@@ -94,5 +95,13 @@ class EditLiftViewController: UIViewController {
         }
     }
     
-
+    
+    @IBAction func removeLift(_ sender: Any)
+    {
+        liftsTableVC?.lifts.remove(at: index)
+        print("index is ", index)
+        liftsTableVC?.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

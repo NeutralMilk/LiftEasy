@@ -738,7 +738,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dJN-Af-Wn0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Lift" id="ZlF-SG-udP"/>
+                    <navigationItem key="navigationItem" title="Edit Lift" id="ZlF-SG-udP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="3Qs-Jg-RYp">
+                            <connections>
+                                <action selector="removeLift:" destination="Na1-yS-MOI" id="FtA-AL-eiJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="eightyTextField" destination="0eh-QX-GTM" id="m5W-uP-gEO"/>
                         <outlet property="fiftyTextField" destination="5hM-IB-iaU" id="lg0-4a-lJk"/>

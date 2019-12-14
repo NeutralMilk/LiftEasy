@@ -12,15 +12,11 @@ class LiftsTableViewController: UITableViewController
 {
 
     var lifts : [Lifts] = []
+    var index = 0
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        let lift1 = Lifts()
-        lift1.name = "Bench Press"
-        
-        lifts = [lift1]
     }
 
     // MARK: - Table view data source
@@ -44,11 +40,13 @@ class LiftsTableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let selectedLift = lifts[indexPath.row]
+        index = indexPath.row
         performSegue(withIdentifier: "goToEditLift", sender: selectedLift)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        
         if let liftVC = segue.destination as? LiftViewController
         {
             liftVC.liftsTableVC = self
@@ -59,6 +57,8 @@ class LiftsTableViewController: UITableViewController
             if let selectedLift = sender as? Lifts
             {
                 editLiftVC.newLift = selectedLift
+                editLiftVC.liftsTableVC = self
+                editLiftVC.index = index
             }
             
         }
