@@ -21,7 +21,7 @@ class EditLiftViewController: UIViewController {
     
     
     var liftsTableVC : LiftsTableViewController? = nil
-    var newLift = Lifts()
+    var newLift : LiftEntity? = nil
     var index = 0
     
     override func viewDidLoad()
@@ -35,13 +35,13 @@ class EditLiftViewController: UIViewController {
 
         view.addGestureRecognizer(tap)
         
-        liftTextField.text = "\(newLift.name)"
-        ormTextField.text = "\(newLift.weights[0])"
-        ninetyTextField.text = "\(newLift.weights[1])"
-        eightyTextField.text = "\(newLift.weights[2])"
-        seventyTextField.text = "\(newLift.weights[3])"
-        sixtyTextField.text = "\(newLift.weights[4])"
-        fiftyTextField.text = "\(newLift.weights[5])"
+        liftTextField.text = "\(String(describing: newLift!.name))"
+        ormTextField.text = "\(newLift!.orm)"
+        ninetyTextField.text = "\(newLift!.ninety)"
+        eightyTextField.text = "\(newLift!.eighty)"
+        seventyTextField.text = "\(newLift!.seventy)"
+        sixtyTextField.text = "\(newLift!.sixty)"
+        fiftyTextField.text = "\(newLift!.fifty)"
         // Do any additional setup after loading the view.
     }
     
@@ -50,14 +50,14 @@ class EditLiftViewController: UIViewController {
     {
         if let orm = Double(ormTextField.text!)
         {
-            newLift.equalise(value: orm)
+            Lifts().equalise(value: orm)
             
-            ormTextField.text = "\(newLift.weights[0])"
-            ninetyTextField.text = "\(newLift.weights[1])"
-            eightyTextField.text = "\(newLift.weights[2])"
-            seventyTextField.text = "\(newLift.weights[3])"
-            sixtyTextField.text = "\(newLift.weights[4])"
-            fiftyTextField.text = "\(newLift.weights[5])"
+            ormTextField.text = "\(newLift!.orm)"
+            ninetyTextField.text = "\(newLift!.ninety)"
+            eightyTextField.text = "\(newLift!.eighty)"
+            seventyTextField.text = "\(newLift!.seventy)"
+            sixtyTextField.text = "\(newLift!.sixty)"
+            fiftyTextField.text = "\(newLift!.fifty)"
         }
     }
     
@@ -72,19 +72,15 @@ class EditLiftViewController: UIViewController {
             let sixty = Double(sixtyTextField.text!),
             let fifty = Double(fiftyTextField.text!)
         {
-            newLift.name = name
-            newLift.weights[0] = orm
-            newLift.weights[1] = ninety
-            newLift.weights[2] = eighty
-            newLift.weights[3] = seventy
-            newLift.weights[4] = sixty
-            newLift.weights[5] = fifty
+            newLift!.name = name
+            newLift!.orm = orm
+            newLift!.ninety = ninety
+            newLift!.eighty = eighty
+            newLift!.seventy = seventy
+            newLift!.sixty = sixty
+            newLift!.fifty = fifty
             
-            newLift.equalise(value: orm)
-            //print(newLift.weights[1], " This is the newLift")
-                
-            //liftsTableVC?.lifts.append(newLift)
-            liftsTableVC?.tableView.reloadData()
+            Lifts().equalise(value: orm)
             navigationController?.popViewController(animated: true)
         }
         else

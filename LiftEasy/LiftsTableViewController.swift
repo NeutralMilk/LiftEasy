@@ -11,12 +11,24 @@ import UIKit
 class LiftsTableViewController: UITableViewController
 {
 
-    var lifts : [Lifts] = []
+    var lifts : [LiftEntity] = []
     var index = 0
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        {
+            if let coreDataLiftEntities = try? context.fetch(LiftEntity.fetchRequest()) as? [LiftEntity]
+            {
+                lifts = coreDataLiftEntities
+                tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -54,7 +66,7 @@ class LiftsTableViewController: UITableViewController
         
         if let editLiftVC = segue.destination as? EditLiftViewController
         {
-            if let selectedLift = sender as? Lifts
+            if let selectedLift = sender as? LiftEntity
             {
                 editLiftVC.newLift = selectedLift
                 editLiftVC.liftsTableVC = self
