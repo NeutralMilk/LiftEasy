@@ -23,6 +23,7 @@ class LiftViewController: UIViewController
     
     var liftsTableVC : LiftsTableViewController? = nil
     let newLift = Lifts()
+
     
     override func viewDidLoad()
     {
@@ -77,10 +78,21 @@ class LiftViewController: UIViewController
             newLift.weights[5] = fifty
             
             newLift.equalise(value: orm)
-            //print(newLift.weights[1], " This is the newLift")
-                
-            liftsTableVC?.lifts.append(newLift)
-            liftsTableVC?.tableView.reloadData()
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+            {
+                let newLiftEntity = LiftEntity(context: context)
+                newLiftEntity.name = newLift.name
+                newLiftEntity.orm = newLift.weights[0]
+                newLiftEntity.ninety = newLift.weights[1]
+                newLiftEntity.eighty = newLift.weights[2]
+                newLiftEntity.seventy = newLift.weights[3]
+                newLiftEntity.sixty = newLift.weights[4]
+                newLiftEntity.fifty = newLift.weights[5]
+                //print(newLift.weights[1], " This is the newLift")
+                    
+                //liftsTableVC?.lifts.append(newLift)
+                //liftsTableVC?.tableView.reloadData()
+            }
             navigationController?.popViewController(animated: true)
         }
         else
@@ -89,6 +101,8 @@ class LiftViewController: UIViewController
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        
+        
             
     }
 
