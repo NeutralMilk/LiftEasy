@@ -94,10 +94,19 @@ class EditLiftViewController: UIViewController {
     
     @IBAction func removeLift(_ sender: Any)
     {
-        liftsTableVC?.lifts.remove(at: index)
-        print("index is ", index)
-        liftsTableVC?.tableView.reloadData()
-        navigationController?.popViewController(animated: true)
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        {
+            if newLift != nil
+            {
+                context.delete(newLift!)
+                navigationController?.popViewController(animated: true)
+            }
+            
+        }
+//        liftsTableVC?.lifts.remove(at: index)
+//        print("index is ", index)
+//        liftsTableVC?.tableView.reloadData()
+        
     }
     
 }
