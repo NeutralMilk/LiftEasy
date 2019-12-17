@@ -50,7 +50,7 @@ class EditLiftViewController: UIViewController {
     {
         if let orm = Double(ormTextField.text!)
         {
-            Lifts().equalise(value: orm)
+            //Lifts().equalise(value: orm)
             
             ormTextField.text = "\(newLift!.orm)"
             ninetyTextField.text = "\(newLift!.ninety)"
@@ -80,7 +80,7 @@ class EditLiftViewController: UIViewController {
             newLift!.sixty = sixty
             newLift!.fifty = fifty
             
-            Lifts().equalise(value: orm)
+            //Lifts().equalise(value: orm)
             navigationController?.popViewController(animated: true)
         }
         else
@@ -101,12 +101,19 @@ class EditLiftViewController: UIViewController {
                 context.delete(newLift!)
                 navigationController?.popViewController(animated: true)
             }
-            
         }
-//        liftsTableVC?.lifts.remove(at: index)
-//        print("index is ", index)
-//        liftsTableVC?.tableView.reloadData()
+    }
+    
+    func rounding(value: Double) -> Double
+    {
+        var value = value
         
+        //round to nearest 2.5
+        value = value / 2.5
+        value.round()
+        value = value * 2.5
+        
+        return value
     }
     
 }
