@@ -32,7 +32,6 @@ class EditLiftViewController: UIViewController {
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-
         view.addGestureRecognizer(tap)
         
         liftTextField.text = "\(String(describing: newLift!.name))"
@@ -45,19 +44,25 @@ class EditLiftViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @objc func dismissKeyboard()
+    {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     
     @IBAction func updateAuto(_ sender: Any)
     {
         if let orm = Double(ormTextField.text!)
         {
             //Lifts().equalise(value: orm)
-            
-            ormTextField.text = "\(newLift!.orm)"
-            ninetyTextField.text = "\(newLift!.ninety)"
-            eightyTextField.text = "\(newLift!.eighty)"
-            seventyTextField.text = "\(newLift!.seventy)"
-            sixtyTextField.text = "\(newLift!.sixty)"
-            fiftyTextField.text = "\(newLift!.fifty)"
+
+            ormTextField.text = "\(rounding(value: orm))"
+            ninetyTextField.text = "\(rounding(value: (orm * 0.9)))"
+            eightyTextField.text = "\(rounding(value: (orm * 0.8)))"
+            seventyTextField.text = "\(rounding(value: (orm * 0.7)))"
+            sixtyTextField.text = "\(rounding(value: (orm * 0.6)))"
+            fiftyTextField.text = "\(rounding(value: (orm * 0.5)))"
         }
     }
     
