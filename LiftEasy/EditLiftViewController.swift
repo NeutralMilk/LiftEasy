@@ -34,7 +34,10 @@ class EditLiftViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        liftTextField.text = "\(String(describing: newLift!.name))"
+        if let text: String = newLift?.name {
+           liftTextField.text = text
+        }
+         //= "\(String(describing: newLift!.name))"
         ormTextField.text = "\(newLift!.orm)"
         ninetyTextField.text = "\(newLift!.ninety)"
         eightyTextField.text = "\(newLift!.eighty)"
