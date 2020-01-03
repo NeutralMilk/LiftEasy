@@ -105,11 +105,33 @@
                             <outlet property="delegate" destination="tV7-Uq-9VH" id="G2q-zJ-x6Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Programs" id="aIT-k7-wag"/>
+                    <navigationItem key="navigationItem" title="Programs" id="aIT-k7-wag">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="xmx-yN-VEE">
+                            <connections>
+                                <segue destination="IRl-AB-ukI" kind="show" identifier="addProgramSegue" id="33W-rQ-460"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duE-SQ-7dk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1848" y="139"/>
+        </scene>
+        <!--Program View Controller-->
+        <scene sceneID="GW8-3F-aQG">
+            <objects>
+                <viewController id="IRl-AB-ukI" customClass="ProgramViewController" customModule="LiftEasy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dOE-Pc-kCs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0GZ-8f-8uv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oMJ-bt-30R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7J4-Qk-0tB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2793" y="139"/>
         </scene>
         <!--Programs-->
         <scene sceneID="gSt-pA-z4N">
@@ -790,4 +812,7 @@
             <point key="canvasLocation" x="-641" y="858"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

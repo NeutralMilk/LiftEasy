@@ -10,10 +10,17 @@
         <attribute name="sixty" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Programs" representedClassName="Programs" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES"/>
+        <attribute name="friday" optional="YES" attributeType="Transformable"/>
+        <attribute name="monday" optional="YES" attributeType="Transformable"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="saturday" optional="YES" attributeType="Transformable"/>
+        <attribute name="sunday" optional="YES" attributeType="Transformable"/>
+        <attribute name="thursday" optional="YES" attributeType="Transformable"/>
+        <attribute name="tuesday" optional="YES" attributeType="Transformable"/>
+        <attribute name="wednesday" optional="YES" attributeType="Transformable"/>
     </entity>
     <elements>
         <element name="LiftEntity" positionX="-63" positionY="-18" width="128" height="148"/>
-        <element name="Programs" positionX="-63" positionY="36" width="128" height="58"/>
+        <element name="Programs" positionX="-63" positionY="36" width="128" height="163"/>
     </elements>
 </model>

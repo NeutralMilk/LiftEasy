@@ -11,29 +11,67 @@ import UIKit
 class ProgramsTableViewController: UITableViewController
 {
 
+    var programs : [Programs] = []
+    var index = 0
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int
+    
+    override func viewWillAppear(_ animated: Bool)
     {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        {
+            if let coreDataPrograms = try? context.fetch(Programs.fetchRequest()) as? [Programs]
+            {
+                programs = coreDataPrograms
+                tableView.reloadData()
+            }
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return programs.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = UITableViewCell()
+        
+        let program = programs[indexPath.row]
+        
+        cell.textLabel?.text = program.name
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let selectedLift = programs[indexPath.row]
+        index = indexPath.row
+        performSegue(withIdentifier: "goToEditLift", sender: selectedLift)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        
+        if let programVC = segue.destination as? ProgramViewController
+        {
+            programVC.programsTableVC = self
+        }
+        
+//        if let editProgramVC = segue.destination as? EditLiftViewController
+//        {
+//            if let selectedLift = sender as? LiftEntity
+//            {
+//                editLiftVC.newLift = selectedLift
+//                editLiftVC.liftsTableVC = self
+//                editLiftVC.index = index
+//            }
+//
+//        }
     }
 
 }
