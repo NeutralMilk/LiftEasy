@@ -8,31 +8,47 @@
 
 import UIKit
 
-class LiftSelectionViewController: UIViewController {
+class LiftSelectionViewController: UITableViewController {
 
-    override func viewDidLoad() {
+    
+    var lifts : [LiftEntity] = []
+    var index = 0
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        //Looks for single or multiple taps.
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-
-        view.addGestureRecognizer(tap)
+        print("and here")
+        
+        self.tableView.allowsMultipleSelection = true
+        self.tableView.allowsMultipleSelectionDuringEditing = true
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        {
+            if let coreDataLiftEntities = try? context.fetch(LiftEntity.fetchRequest()) as? [LiftEntity]
+            {
+                lifts = coreDataLiftEntities
+                tableView.reloadData()
+            }
+        }
+        
     }
     
-    @objc func dismissKeyboard()
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
+        return lifts.count
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = UITableViewCell()
+        
+        let lift = lifts[indexPath.row]
+        
+        cell.textLabel?.text = lift.name
+        
+        return cell
     }
-    */
-
+    
 }

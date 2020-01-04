@@ -148,7 +148,7 @@
                                 </constraints>
                                 <state key="normal" title="Monday"/>
                                 <connections>
-                                    <segue destination="IU5-5B-f4k" kind="show" id="6Mx-Yl-wdP"/>
+                                    <segue destination="IU5-5B-f4k" kind="show" identifier="mondaySegue" id="6Mx-Yl-wdP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbN-T2-ZMs">
@@ -160,7 +160,7 @@
                                 </constraints>
                                 <state key="normal" title="Tuesday"/>
                                 <connections>
-                                    <segue destination="IU5-5B-f4k" kind="show" id="WXL-aC-Boq"/>
+                                    <segue destination="IU5-5B-f4k" kind="show" identifier="tuesdaySegue" id="WXL-aC-Boq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6m-aw-XwW">
@@ -172,7 +172,7 @@
                                 </constraints>
                                 <state key="normal" title="Wednesday"/>
                                 <connections>
-                                    <segue destination="IU5-5B-f4k" kind="show" id="Mjy-lh-0p5"/>
+                                    <segue destination="IU5-5B-f4k" kind="show" identifier="wednesdaySegue" id="Mjy-lh-0p5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87W-c6-yHo">
@@ -184,7 +184,7 @@
                                 </constraints>
                                 <state key="normal" title="Thursday"/>
                                 <connections>
-                                    <segue destination="IU5-5B-f4k" kind="show" id="nCz-IV-VEz"/>
+                                    <segue destination="IU5-5B-f4k" kind="show" identifier="thursdaySegue" id="nCz-IV-VEz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-vN-zou">
@@ -196,7 +196,7 @@
                                 </constraints>
                                 <state key="normal" title="Friday"/>
                                 <connections>
-                                    <segue destination="IU5-5B-f4k" kind="show" id="ROg-XS-RJs"/>
+                                    <segue destination="IU5-5B-f4k" kind="show" identifier="fridaySegue" id="ROg-XS-RJs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tY-cE-wAn">
@@ -208,7 +208,7 @@
                                 </constraints>
                                 <state key="normal" title="Saturday"/>
                                 <connections>
-                                    <segue destination="IU5-5B-f4k" kind="show" id="IAq-EN-iYh"/>
+                                    <segue destination="IU5-5B-f4k" kind="show" identifier="saturdaySegue" id="IAq-EN-iYh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEP-2B-Z2v">
@@ -220,7 +220,7 @@
                                 </constraints>
                                 <state key="normal" title="Sunday"/>
                                 <connections>
-                                    <segue destination="IU5-5B-f4k" kind="show" id="csR-Du-XHT"/>
+                                    <segue destination="IU5-5B-f4k" kind="show" identifier="sundaySegue" id="csR-Du-XHT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFS-YW-cAJ">
@@ -279,7 +279,7 @@
         <!--Programs-->
         <scene sceneID="gSt-pA-z4N">
             <objects>
-                <tableViewController id="IU5-5B-f4k" sceneMemberID="viewController">
+                <tableViewController id="IU5-5B-f4k" customClass="LiftSelectionViewController" customModule="LiftEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CIp-vj-YkS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

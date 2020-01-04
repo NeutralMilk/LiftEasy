@@ -56,6 +56,16 @@ class ProgramViewController: UIViewController {
         sundayButton.layer.cornerRadius = 5
         sundayButton.layer.borderWidth = 1
         sundayButton.layer.borderColor = UIColor.systemBlue.cgColor
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
 }
