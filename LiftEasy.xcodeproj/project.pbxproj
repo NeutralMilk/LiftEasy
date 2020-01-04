@@ -19,6 +19,7 @@
 		050DDA1A239BFA1B004D56C8 /* NutritionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DDA19239BFA1B004D56C8 /* NutritionTableViewController.swift */; };
 		050DDA1E239C0C3C004D56C8 /* LiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DDA1D239C0C3C004D56C8 /* LiftViewController.swift */; };
 		058EC6E723BFC9EA00762CC4 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058EC6E623BFC9EA00762CC4 /* ProgramViewController.swift */; };
+		05960C5D23C13B5300BD4ED2 /* LiftSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05960C5C23C13B5300BD4ED2 /* LiftSelectionViewController.swift */; };
 		05C0296F23A1605300BC8388 /* EditLiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C0296E23A1605300BC8388 /* EditLiftViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		050DDA19239BFA1B004D56C8 /* NutritionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionTableViewController.swift; sourceTree = "<group>"; };
 		050DDA1D239C0C3C004D56C8 /* LiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftViewController.swift; sourceTree = "<group>"; };
 		058EC6E623BFC9EA00762CC4 /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		05960C5C23C13B5300BD4ED2 /* LiftSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftSelectionViewController.swift; sourceTree = "<group>"; };
 		05C0296E23A1605300BC8388 /* EditLiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLiftViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				050DDA19239BFA1B004D56C8 /* NutritionTableViewController.swift */,
 				050DDA1D239C0C3C004D56C8 /* LiftViewController.swift */,
 				058EC6E623BFC9EA00762CC4 /* ProgramViewController.swift */,
+				05960C5C23C13B5300BD4ED2 /* LiftSelectionViewController.swift */,
 				05C0296E23A1605300BC8388 /* EditLiftViewController.swift */,
 				050DDA04239BF101004D56C8 /* Main.storyboard */,
 				050DDA0A239BF102004D56C8 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05960C5D23C13B5300BD4ED2 /* LiftSelectionViewController.swift in Sources */,
 				050DDA03239BF101004D56C8 /* ViewController.swift in Sources */,
 				050DDA1A239BFA1B004D56C8 /* NutritionTableViewController.swift in Sources */,
 				050DD9FF239BF101004D56C8 /* AppDelegate.swift in Sources */,

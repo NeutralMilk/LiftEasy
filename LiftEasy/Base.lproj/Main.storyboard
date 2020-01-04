@@ -147,6 +147,9 @@
                                     <constraint firstAttribute="width" constant="100" id="PYd-iD-7W0"/>
                                 </constraints>
                                 <state key="normal" title="Monday"/>
+                                <connections>
+                                    <segue destination="IU5-5B-f4k" kind="show" id="6Mx-Yl-wdP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbN-T2-ZMs">
                                 <rect key="frame" x="157" y="272" width="100" height="40"/>
@@ -156,6 +159,9 @@
                                     <constraint firstAttribute="height" constant="40" id="gfd-OB-qcW"/>
                                 </constraints>
                                 <state key="normal" title="Tuesday"/>
+                                <connections>
+                                    <segue destination="IU5-5B-f4k" kind="show" id="WXL-aC-Boq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6m-aw-XwW">
                                 <rect key="frame" x="157" y="327" width="100" height="40"/>
@@ -165,6 +171,9 @@
                                     <constraint firstAttribute="width" constant="100" id="6bc-dg-AT4"/>
                                 </constraints>
                                 <state key="normal" title="Wednesday"/>
+                                <connections>
+                                    <segue destination="IU5-5B-f4k" kind="show" id="Mjy-lh-0p5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87W-c6-yHo">
                                 <rect key="frame" x="157" y="382" width="100" height="40"/>
@@ -174,6 +183,9 @@
                                     <constraint firstAttribute="width" constant="100" id="w6n-lL-UnG"/>
                                 </constraints>
                                 <state key="normal" title="Thursday"/>
+                                <connections>
+                                    <segue destination="IU5-5B-f4k" kind="show" id="nCz-IV-VEz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-vN-zou">
                                 <rect key="frame" x="157" y="437" width="100" height="40"/>
@@ -183,6 +195,9 @@
                                     <constraint firstAttribute="width" constant="100" id="Z0O-g4-Jg1"/>
                                 </constraints>
                                 <state key="normal" title="Friday"/>
+                                <connections>
+                                    <segue destination="IU5-5B-f4k" kind="show" id="ROg-XS-RJs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tY-cE-wAn">
                                 <rect key="frame" x="157" y="492" width="100" height="40"/>
@@ -192,6 +207,9 @@
                                     <constraint firstAttribute="width" constant="100" id="LNP-Z0-CKe"/>
                                 </constraints>
                                 <state key="normal" title="Saturday"/>
+                                <connections>
+                                    <segue destination="IU5-5B-f4k" kind="show" id="IAq-EN-iYh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEP-2B-Z2v">
                                 <rect key="frame" x="157" y="547" width="100" height="40"/>
@@ -201,6 +219,9 @@
                                     <constraint firstAttribute="height" constant="40" id="acd-fQ-UzG"/>
                                 </constraints>
                                 <state key="normal" title="Sunday"/>
+                                <connections>
+                                    <segue destination="IU5-5B-f4k" kind="show" id="csR-Du-XHT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFS-YW-cAJ">
                                 <rect key="frame" x="157" y="622" width="100" height="40"/>
@@ -240,6 +261,16 @@
                         <viewLayoutGuide key="safeArea" id="0GZ-8f-8uv"/>
                     </view>
                     <navigationItem key="navigationItem" id="oMJ-bt-30R"/>
+                    <connections>
+                        <outlet property="addProgramButton" destination="yFS-YW-cAJ" id="8h5-sS-THa"/>
+                        <outlet property="fridayButton" destination="CpC-vN-zou" id="SvM-jl-Pbv"/>
+                        <outlet property="mondayButton" destination="wvK-fW-xHx" id="9fx-Fh-TPA"/>
+                        <outlet property="saturdayButton" destination="0tY-cE-wAn" id="e3O-W2-3VB"/>
+                        <outlet property="sundayButton" destination="nEP-2B-Z2v" id="yWb-Xm-z84"/>
+                        <outlet property="thursdayButton" destination="87W-c6-yHo" id="lVa-cv-EUI"/>
+                        <outlet property="tuesdayButton" destination="cbN-T2-ZMs" id="DHw-5u-Sim"/>
+                        <outlet property="wednesdayButton" destination="S6m-aw-XwW" id="VVT-nF-ehJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7J4-Qk-0tB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +279,7 @@
         <!--Programs-->
         <scene sceneID="gSt-pA-z4N">
             <objects>
-                <tableViewController id="IU5-5B-f4k" customClass="ProgramsTableViewController" customModule="LiftEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="IU5-5B-f4k" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CIp-vj-YkS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,7 +303,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL0-06-J8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="2304"/>
+            <point key="canvasLocation" x="3623" y="139"/>
         </scene>
         <!--Nutrition-->
         <scene sceneID="tvl-w7-zWY">
@@ -927,4 +958,7 @@
     <resources>
         <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6Mx-Yl-wdP"/>
+    </inferredMetricsTieBreakers>
 </document>
