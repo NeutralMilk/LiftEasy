@@ -68,4 +68,8 @@ class ProgramViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func addProgram(_ sender: Any)
+    {
+        navigationController?.popViewController(animated: true)
+    }
 }
